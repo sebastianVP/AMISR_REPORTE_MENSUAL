@@ -33,7 +33,7 @@ for dir in "$DIRECTORIO"/"$PREFIJO"*; do
             echo "$FECHA_CREACION,$(basename "$dir"),$TAMANO" >> "$SALIDA"
 
             # Imprimir en pantalla el directorio procesado
-            echo "📁 Directorio: $(basename "$dir") | Fecha: $FECHA_CREACION | Tamaño: $TAMANO"
+            echo "📁 Directorio: $(basename "$dir") | Fecha: $FECHA_CREACION | Tamano: $TAMANO"
         fi
     fi
 done
