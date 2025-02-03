@@ -9,7 +9,7 @@ PREFIJO = "202501"
 SALIDA="reporte_directorios_$(date +%Y-%m).csv"
 
 # Encabezado del CSV
-echo "Fecha,Directorio,Tamaño" > "$SALIDA"
+echo "Fecha,Directorio,Tamano" > "$SALIDA"
 
 echo "📂 Procesando directorios en $DIRECTORIO que comienzan con '$PREFIJO'..."
 echo "---------------------------------------"
