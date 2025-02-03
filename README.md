@@ -4,3 +4,9 @@ El objetivo de este repositorio es almacenar los codigos y scripts para generar 
 
 1. Se desarrolla un script en bash para generar un archivo csv. El formato del archivo csv contiene la informacion siguiente:
  * Fecha, direccion y tamano
+
+
+#**COMANDO PARA EJECUTAR**
+
+$ ./revision_final.sh  /media/soporte/Expansion/AMISR/2024 202501
+
