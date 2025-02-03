@@ -3,6 +3,7 @@ import re
 
 # Cargar el archivo CSV
 file_path = "reporte_directorios_2025-01.csv"  # Reemplaza con la ruta real
+file_path = "reporte_directorios_desk_2025-02.csv"
 df = pd.read_csv(file_path)
 
 # Función para convertir los valores de la columna Tamaño
@@ -29,8 +30,15 @@ resultado = df.groupby("Dia")["Tamano_GB"].sum().reset_index()
 
 # Aplicar la fórmula para obtener la cantidad de horas:
 # Se multiplica el valor en GB por 94.3, se divide entre 24 y se establece 24 horas como máximo
-resultado["Horas"] = (resultado["Tamano_GB"] * 94.3) / 24
+resultado["Horas"] = (resultado["Tamano_GB"] * 24) / 94.3
 resultado["Horas"] = resultado["Horas"].apply(lambda h: 24 if h >= 24 else h)
+
+
+# Calcular la suma de las horas
+suma_horas = resultado["Horas"].sum()
+
+# Mostrar el resultado
+print(f"La suma total de horas de operación es: {suma_horas}")
 
 # Guardar el resultado en un archivo CSV
 output_file = "reporte_tamanos_directorios.csv"
