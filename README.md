@@ -35,7 +35,9 @@ El script final se llama: revision_manual.sh
 * En el crontab hemos configurado para generar el archivo:
 
 # GENERANDO REPORTE DE ADQUISICION DE DATOS
-0 10 * * * export DISPLAY=:0 && /home/soporte/Documents/AMISR_REPORTE_MENSUAL/revision_mensual_log.sh /mnt/data_amisr 202502
+01 10 * * * export DISPLAY=:0 && /home/soporte/Documents/AMISR_REPORTE_MENSUAL/revision_mensual_log.sh /mnt/data_amisr 202502
+# GENERANDO REPORTE DE HORAS
+15 10 * * * export DISPLAY=:0 && /home/soporte/Documents/AMISR_REPORTE_MENSUAL/reporte_python.sh   
 
 * Con este script generamos el archivo:
 reporte_directorios_desk_202502.csv
