@@ -3,7 +3,7 @@
 El objetivo de este repositorio es almacenar los codigos y scripts para generar el reporte de operacion mensual del radar AMISR-14.
 
 
-Los programas mas importantes son:
+Los programas mas importantes se encuentran en el siguiente directorio **/home/soporte/Documents/AMISR_REPORTE_MENSUAL**y son:
 
 1. revision_mensual_log.sh
 Genera el reporte de fechas y carpetas
@@ -12,6 +12,8 @@ Genera el reporte de fechas y carpetas
 Lee el archivo csv generado por el bash y obtiene la horas por dia de datos.
 
 3. Debemos tener un programa que se encargue de generar el reporte osea un informe con imagenes y graficos.
+Este programa se llama **reporte_python.py**
+
 
 ----
 
