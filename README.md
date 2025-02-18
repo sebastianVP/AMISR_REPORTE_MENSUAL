@@ -10,3 +10,5 @@ El objetivo de este repositorio es almacenar los codigos y scripts para generar 
 
 $ ./revision_final.sh  /media/soporte/Expansion/AMISR/2024 202501
 
+El script final se llama: revision_manual.sh
+
