@@ -8,11 +8,11 @@ Los programas mas importantes se encuentran en el siguiente directorio **/home/s
 1. revision_mensual_log.sh
 Genera el reporte de fechas y carpetas
 
-2. generar_reporte.py
+2. repote_python.py
 Lee el archivo csv generado por el bash y obtiene la horas por dia de datos.
 
 3. Debemos tener un programa que se encargue de generar el reporte osea un informe con imagenes y graficos.
-Este programa se llama **reporte_python.py**
+Este programa se llama **pendiente.py**
 
 
 ----
