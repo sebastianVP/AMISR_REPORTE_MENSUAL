@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Obtener la ruta del script (directorio donde está ubicado)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+
 # Verificar si el usuario ha proporcionado los argumentos requeridos
 if [ -z "$1" ] || [ -z "$2" ]; then
     echo "❌ Uso incorrecto." | tee -a "$LOG_FILE"
@@ -14,7 +18,7 @@ MES_ANIO="$2"
 DIAS_ATRAS=${3:-1}  # Si no se especifica, por defecto es 1 día atrás
 
 # Definir archivo de log (con fecha de ejecución)
-LOG_FILE="$(pwd)/log_reporte_$(date +%Y-%m-%d).log"
+LOG_FILE="$SCRIPT_DIR/log_reporte_$(date +%Y-%m-%d).log"
 
 # Iniciar log con fecha y hora
 echo "🕒 Inicio de ejecución: $(date '+%Y-%m-%d %H:%M:%S')" | tee -a "$LOG_FILE"
@@ -38,7 +42,7 @@ fi
 FECHA_ANALIZAR=$(date -d "$DIAS_ATRAS days ago" +%Y-%m-%d)
 
 # Archivo de salida
-SALIDA="$(pwd)/reporte_directorios_desk_${MES_ANIO}.csv"
+SALIDA="$SCRIPT_DIR/reporte_directorios_desk_${MES_ANIO}.csv"
 
 # Si el archivo no existe, generar datos desde el 01 de enero de 2025
 if [ ! -f "$SALIDA" ]; then
