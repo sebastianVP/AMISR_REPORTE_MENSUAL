@@ -63,10 +63,12 @@ if [ ! -f "$SALIDA" ]; then
     done
 else
     echo "📂 Procesando directorios en $DIRECTORIO para la fecha $FECHA_ANALIZAR..."
-    echo "-----------------------
+    echo "-----------------------"
 
     # Obtener directorios creados en el mes y año especificados
-    for dir in "$DIRECTORIO"/"$PREFIJO"*; do
+
+    # for dir in "$DIRECTORIO"/"$PREFIJO"*; do
+    for dir in "$DIRECTORIO"/*; do
         echo "$dir"
         if [ -d "$dir" ]; then
             # Obtener la fecha de creación (formato YYYY-MM-DD)
