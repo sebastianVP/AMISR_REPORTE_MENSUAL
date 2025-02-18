@@ -6,7 +6,8 @@ import os
 # Archivo de entrada
 file_path = "reporte_directorios_desk_2025-02.csv"
 # Archivo de salida
-output_file = "reporte_tamanos_directorios.csv"
+
+output_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reporte_tamanos_directorios.csv")
 
 # Cargar el archivo CSV con los datos nuevos
 df = pd.read_csv(file_path)
