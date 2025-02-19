@@ -5,11 +5,14 @@ El objetivo de este repositorio es almacenar los codigos y scripts para generar 
 
 Los programas mas importantes se encuentran en el siguiente directorio **/home/soporte/Documents/AMISR_REPORTE_MENSUAL**y son:
 
-1. rev001_mensual_log.sh
+1. *rev001_mensual_log.sh*
 Genera el reporte de fechas y carpetas
 
-2. reporte_python_final.py
+2. *reporte_python_final.py* , este script es llamado o activado desde crontab por *reporte_python.sh*
+
 Lee el archivo csv generado por el bash y obtiene la horas por dia de datos.
+El archivo generado se llama reporte_tamanos_directorios.csv
+Contiene la informacion desde el 01 de Enero del 2025.
 
 3. Debemos tener un programa que se encargue de generar el reporte osea un informe con imagenes y graficos.
 Este programa se llama **pendiente.py**
