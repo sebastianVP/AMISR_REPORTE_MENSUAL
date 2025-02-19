@@ -55,9 +55,7 @@ for carpeta in "$DIRECTORIO_BASE"/*; do
         fecha=${nombre%%.*}  # Obtener YYYYMMDD
 
         if [[ "$fecha" =~ ^[0-9]{8}$ ]] && [[ "$fecha" -le "$FECHA_LIMITE" ]]; then
-            if [[ -n "${EXISTENTES["$fecha|$nombre"]}" ]]; then
-                echo "$fecha,$nombre,${EXISTENTES["$fecha|$nombre"]}" >> "$REPORTE"
-            else
+            if [[ -z "${EXISTENTES["$fecha|$nombre"]}" ]]; then
                 tamano_bytes=$(du -sb "$carpeta" | awk '{print $1}')
                 tamano_formateado=$(format_size "$tamano_bytes")
                 echo "$fecha,$nombre,$tamano_formateado" >> "$REPORTE"
