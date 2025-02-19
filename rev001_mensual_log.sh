@@ -15,7 +15,7 @@ DIRECTORIO_BASE="$1"
 DIAS_ATRAS="${2:-1}"  # Si no se proporciona, usa 1 día antes
 HOY=$(date +%Y%m%d)
 FECHA_LIMITE=$(date -d "$DIAS_ATRAS days ago" +%Y%m%d)
-REPORTE="$SCRIPT_DIR/reporte_tamanos_2025.csv"
+REPORTE="$SCRIPT_DIR/reporte_directorios_2025.csv"
 LOG_FILE="$SCRIPT_DIR/log_reporte_$(date +%Y-%m-%d).log"
 
 # Iniciar log con fecha y hora
@@ -45,7 +45,7 @@ if [[ -f "$REPORTE" ]]; then
     done < <(tail -n +2 "$REPORTE")  # Omitir el encabezado
 fi
 
-echo "Fecha,Directorio,Tamaño" > "$REPORTE"
+echo "Fecha,Directorio,Tamano" > "$REPORTE"
 
 # Buscar directorios con el formato YYYYMMDD.NNN
 echo "📂 Analizando directorios en '$DIRECTORIO_BASE' hasta la fecha $FECHA_LIMITE..." | tee -a "$LOG_FILE"
