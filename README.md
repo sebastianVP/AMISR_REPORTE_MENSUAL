@@ -5,7 +5,7 @@ El objetivo de este repositorio es almacenar los codigos y scripts para generar 
 
 Los programas mas importantes se encuentran en el siguiente directorio **/home/soporte/Documents/AMISR_REPORTE_MENSUAL**y son:
 
-1. *rev001_mensual_log.sh*
+1. *rev002_mensual_log.sh*
 Genera el reporte de fechas y carpetas
 
 2. *reporte_python_final.py* , este script es llamado o activado desde crontab por *reporte_python.sh*
