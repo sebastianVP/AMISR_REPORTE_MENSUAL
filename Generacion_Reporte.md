@@ -40,6 +40,11 @@ Usar  los programas:
 * amisr_stats_v2.py
 * amisrReports.py
 
+
+Primer paso antes de actualizar y escribir en los archivos respectivos o bases de datos 
+
+$ python amisrReports.py  --read_write read  --startDate  2025/01/01 --endDate 2025/02/24 --panels_list all --dataType "volts rev"
+
 Actualizar las bases de datos:
 
 $ python amisrReports.py  --read_write write  --startDate  2025/01/01 --endDate 2025/02/24 --panels_list all --dataType "volts rev"
