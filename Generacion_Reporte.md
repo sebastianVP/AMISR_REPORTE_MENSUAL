@@ -1,9 +1,12 @@
 **GENERACION DE REPORTE DE OPERACION AMISR-14**
 ---
-**1. Comandos para conexion-Test:**
-RECORDAR SIEMPRE EL COMANDO DE CONEXION SSH:
-ssh -i /home/soporte/.ssh/id_rsa-umetops.txt   -oKexAlgorithms=+diffie-hellman-group1-sha1 umetops@10.10.40.121 -L 4901:localhost:80 -L 3950:dtc0:5900 -L 3941:dtc0:9000
 
+**1. Comandos para conexion-Test:**
+
+RECORDAR SIEMPRE EL COMANDO DE CONEXION SSH:
+```
+ssh -i /home/soporte/.ssh/id_rsa-umetops.txt   -oKexAlgorithms=+diffie-hellman-group1-sha1 umetops@10.10.40.121 -L 4901:localhost:80 -L 3950:dtc0:5900 -L 3941:dtc0:9000
+```
 password: amisr beam scan
 
 Esta es la base de la conexion
